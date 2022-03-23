@@ -1,0 +1,22 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Hamzi25/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Hamzi25/frontend-project-lvl1/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "sss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamzi25/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "brain-games"
+  ],
+  "author": "Hamzat Torshkhoev hamza.torshkho https://vk.com/hamzamuslim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hamzi25/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Hamzi25/frontend-project-lvl1#readme"
+}
