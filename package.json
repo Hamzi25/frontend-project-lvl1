@@ -1,8 +1,12 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "description": "[![Actions Status](https://github.com/Hamzi25/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Hamzi25/frontend-project-lvl1/actions)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "sss"
   },
