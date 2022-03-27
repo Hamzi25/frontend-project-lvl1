@@ -2,7 +2,7 @@ install-dev:
 		npm ci
 
 install:
-		npm install
+		npm install eslint
 
 brain-games:
 		node bin/brain-games.js
