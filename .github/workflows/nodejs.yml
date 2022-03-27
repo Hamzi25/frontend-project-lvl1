@@ -17,11 +17,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node }}
-    - name: npm install
-      run: |
-        make install
-      env:
-        CI: true
     - name: run liner
       run: |
         make lint
+    env:
+        CI: true
