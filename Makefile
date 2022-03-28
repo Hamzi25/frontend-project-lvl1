@@ -1,10 +1,5 @@
-install-dev:
-		npm ci --production
-
 install:
-		npm install eslint
-		npm install eslint-config-airbnb-base
-		npm install eslint-plugin-import
+		npm ci
 
 brain-games:
 		node bin/brain-games.js
