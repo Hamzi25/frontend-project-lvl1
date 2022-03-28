@@ -1,5 +1,5 @@
 install-dev:
-		npm ci
+		npm ci --production
 
 install:
 		npm install eslint
