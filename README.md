@@ -5,3 +5,5 @@
 [![Node.js CI](https://github.com/Hamzi25/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/Hamzi25/frontend-project-lvl1/actions/workflows/nodejs.yml)
 ### Brain-Even
 [![asciicast](https://asciinema.org/a/g2da81lwCTZpXJtt6RCvrTpl3.svg)](https://asciinema.org/a/g2da81lwCTZpXJtt6RCvrTpl3)
+### Brain-Calc
+[![asciicast](https://asciinema.org/a/elxpVco3maeE2TRLxfwlr4dV0.svg)](https://asciinema.org/a/elxpVco3maeE2TRLxfwlr4dV0)
