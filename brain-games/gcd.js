@@ -19,7 +19,7 @@ const getGcd = (num1, num2) => {
 };
 
 const newRound = (num1 = getRandomNumber(), num2 = getRandomNumber()) => {
-  const question = `${num1} and ${num2}`;
+  const question = `${num1} ${num2}`;
   const answer = String(getGcd(num1, num2));
 
   return [question, answer];
