@@ -14,7 +14,7 @@ const playTheGame = (condition, newRound) => {
     console.log(`Question: ${question}`);
     const answerOfUser = readlineSync.question('Your answer: ');
 
-    if (answer !== answerOfUser) {
+    if (answer != answerOfUser) {
       return console.log(`${answerOfUser} is wrong answer ;(. Correct answer was ${answer}. Let's try again, ${userName}!`);
     }
 
