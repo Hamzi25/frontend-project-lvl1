@@ -28,7 +28,7 @@ const changeRandomElem = (arr = getProg()) => {
 
 const newRound = () => {
   const arr = changeRandomElem();
-  const question = arr.join(', ');
+  const question = arr.join(' ');
   const dotElem = arr.indexOf('..');
   const midElem = Math.ceil((arr.length / 2) - 1);
   const diff = (arr[midElem] === '..' || arr[midElem - 1] === '..') ? arr[arr.length - 1] - arr[arr.length - 2] : arr[midElem] - arr[midElem - 1];
