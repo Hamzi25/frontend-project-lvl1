@@ -33,7 +33,7 @@ const newRound = () => {
   const midElem = Math.ceil(arr.length / 2);
   const diff = (arr[midElem] === '..' || arr[midElem - 1] === '..') ? arr[arr.length - 1] - arr[arr.length - 2] : arr[midElem] - arr[midElem - 1];
   // eslint-disable-next-line max-len
-  const answer = (dotElem === 0 || dotElem === midElem) ? (arr[1] - diff) : (arr[0] + (diff * dotElem));
+  const answer = ((dotElem === 0 || dotElem === midElem) ? (arr[1] - diff) : (arr[0] + (diff * dotElem)));
   return [question, answer];
 };
 
