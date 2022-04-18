@@ -15,9 +15,7 @@ const getProg = (firstElem = getRandomNumber()) => {
   return arr;
 };
 
-const newArr = getProg();
-
-const changeRandomElem = (arr = newArr) => {
+const changeRandomElem = (arr = getProg()) => {
   const min = 0;
   const max = arr.length - 1;
   const randomNum = getRandomIndex(min, max);
@@ -32,11 +30,17 @@ const newRound = () => {
   const arr = changeRandomElem();
   const question = arr.join(', ');
   const dotElem = arr.indexOf('..');
-  const midElem = Math.ceil(arr.length / 2);
+  const midElem = Math.ceil((arr.length / 2) - 1);
   const diff = (arr[midElem] === '..' || arr[midElem - 1] === '..') ? arr[arr.length - 1] - arr[arr.length - 2] : arr[midElem] - arr[midElem - 1];
-  // eslint-disable-next-line max-len
-  const answer = (dotElem === 0 || dotElem === midElem) ? (arr[1] - diff) : (arr[0] + (diff * dotElem));
-  return [question, answer];
+  let answer;
+  if (dotElem === 0) {
+    answer = arr[1] - diff;
+  } else if (dotElem === midElem) {
+    answer = arr[midElem + 1] - diff;
+  } else {
+    answer = arr[0] + (diff * dotElem);
+  }
+  return [question, String(answer)];
 };
 
 const brainProg = () => playTheGame(progCondition, newRound);
