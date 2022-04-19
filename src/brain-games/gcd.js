@@ -18,7 +18,7 @@ const getGcd = (num1, num2) => {
   return x;
 };
 
-const getNewRound = (num1 = randomNumber(), num2 = randomNumber()) => {
+const getNewRound = (num1 = randomNumber(1, 100), num2 = randomNumber(1, 100)) => {
   const question = `${num1} ${num2}`;
   const answer = String(getGcd(num1, num2));
 
