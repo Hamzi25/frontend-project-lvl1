@@ -1,16 +1,15 @@
 import readlineSync from 'readline-sync';
 
-const round = 3;
+const rounds = 3;
 
-// eslint-disable-next-line consistent-return
-const playTheGame = (condition, newRound) => {
+const playTheGame = (condition, getNewRound) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(condition);
 
-  for (let i = 1; i <= round; i += 1) {
-    const [question, answer] = newRound();
+  for (let i = 0; i < rounds; i += 1) {
+    const [question, answer] = getNewRound();
     console.log(`Question: ${question}`);
     const answerOfUser = readlineSync.question('Your answer: ');
     if (answer !== answerOfUser) {
@@ -19,7 +18,7 @@ const playTheGame = (condition, newRound) => {
 
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${userName}!`);
+  return console.log(`Congratulations, ${userName}!`);
 };
 
 export default playTheGame;

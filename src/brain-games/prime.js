@@ -15,13 +15,13 @@ const isPrime = (num) => {
   return true;
 };
 
-const newRound = () => {
+const getNewRound = () => {
   const num = randomNumber(2, 100);
   const question = num;
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 };
 
-const brainEven = () => playTheGame(evenCondition, newRound);
+const brainEven = () => playTheGame(evenCondition, getNewRound);
 
 export default brainEven;

@@ -1,14 +1,15 @@
 import playTheGame from '../index.js';
-import getRandomNumber from '../getRandomNum.js';
-import getRandomLength from '../getRandomLength.js';
-import getRandomIndex from '../getRandomIndex.js';
+import randomNumber from '../getRandomNum.js';
 
 const progCondition = 'What number is missing in the progression?';
 
-const getProg = (firstElem = getRandomNumber()) => {
+const num1 = randomNumber(1, 100);
+const num2 = randomNumber(1, 100);
+
+const getProg = (firstElem = num1) => {
   const arr = [firstElem];
-  const diff = getRandomNumber();
-  for (let i = 1; i < getRandomLength(); i += 1) {
+  const diff = num2;
+  for (let i = 1; i < randomNumber(5, 10); i += 1) {
     const nextNumber = firstElem + (diff * i);
     arr.push(nextNumber);
   }
@@ -16,9 +17,7 @@ const getProg = (firstElem = getRandomNumber()) => {
 };
 
 const changeRandomElem = (arr = getProg()) => {
-  const min = 0;
-  const max = arr.length - 1;
-  const randomNum = getRandomIndex(min, max);
+  const randomNum = randomNumber(0, arr.length - 1);
   const dobleDot = '..';
   const result = arr;
   result[randomNum] = dobleDot;
@@ -26,12 +25,12 @@ const changeRandomElem = (arr = getProg()) => {
   return arr;
 };
 
-const newRound = () => {
+const getNewRound = () => {
   const arr = changeRandomElem();
   const question = arr.join(' ');
   const dotElem = arr.indexOf('..');
   const midElem = Math.ceil((arr.length / 2) - 1);
-  const diff = (arr[midElem] === '..' || arr[midElem - 1] === '..') ? arr[arr.length - 1] - arr[arr.length - 2] : arr[midElem] - arr[midElem - 1];
+  const diff = num2;
   let answer;
   if (dotElem === 0) {
     answer = arr[1] - diff;
@@ -43,6 +42,6 @@ const newRound = () => {
   return [question, String(answer)];
 };
 
-const brainProg = () => playTheGame(progCondition, newRound);
+const brainProg = () => playTheGame(progCondition, getNewRound);
 
 export default brainProg;
