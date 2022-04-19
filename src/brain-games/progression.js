@@ -1,7 +1,7 @@
-import playTheGame from '../src/index.js';
-import getRandomNumber from '../src/getRandomNum.js';
-import getRandomLength from '../src/getRandomLength.js';
-import getRandomIndex from '../src/getRandomIndex.js';
+import playTheGame from '../index.js';
+import getRandomNumber from '../getRandomNum.js';
+import getRandomLength from '../getRandomLength.js';
+import getRandomIndex from '../getRandomIndex.js';
 
 const progCondition = 'What number is missing in the progression?';
 

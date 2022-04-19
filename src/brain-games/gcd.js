@@ -1,5 +1,5 @@
-import playTheGame from '../src/index.js';
-import getRandomNumber from '../src/getRandomNum.js';
+import playTheGame from '../index.js';
+import getRandomNumber from '../getRandomNum.js';
 
 const gcdCondition = 'Find the greatest common divisor of given numbers.';
 
