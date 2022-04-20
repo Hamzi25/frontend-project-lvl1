@@ -20,11 +20,11 @@ const getRundomOper = (oper) => oper[randomNumber(0, oper.length - 1)];
 const operators = ['+', '-', '*'];
 
 const getNewRound = () => {
-  const num1 = randomNumber(1, 100);
-  const num2 = randomNumber(1, 100);
+  const number1 = randomNumber(1, 100);
+  const number2 = randomNumber(1, 100);
   const randomOper = getRundomOper(operators);
-  const answer = String(getTypeOfCulc(num1, num2, randomOper));
-  const question = `${num1} ${randomOper} ${num2}`;
+  const answer = String(getTypeOfCulc(number1, number2, randomOper));
+  const question = `${number1} ${randomOper} ${number2}`;
   return [question, answer];
 };
 

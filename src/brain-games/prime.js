@@ -16,9 +16,9 @@ const isPrime = (num) => {
 };
 
 const getNewRound = () => {
-  const num = randomNumber(2, 100);
-  const question = num;
-  const answer = isPrime(num) ? 'yes' : 'no';
+  const number = randomNumber(2, 100);
+  const question = number;
+  const answer = isPrime(number) ? 'yes' : 'no';
   return [question, answer];
 };
 

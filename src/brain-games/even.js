@@ -6,9 +6,9 @@ const evenCondition = 'Answer "yes" if the number is even, otherwise answer "no"
 const isEven = (num) => (num % 2 === 0);
 
 const getNewRound = () => {
-  const num = randomNumber(1, 100);
-  const question = num;
-  const answer = isEven(num) ? 'yes' : 'no';
+  const number = randomNumber(1, 100);
+  const question = number;
+  const answer = isEven(number) ? 'yes' : 'no';
   return [question, answer];
 };
 
